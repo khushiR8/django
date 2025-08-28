@@ -1,0 +1,25 @@
+{% extends "renting/base.html" %}   
+
+<!-- inherits from base html -->
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Welcome to the Homepage!</h2>
+<p>This is the home section.</p>
+
+<!-- Example Form -->
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <input type="submit" value="Login">
+</form>
+{% if submitted %}
+    <p>✅ Hello, {{ username }}! You submitted the form.</p>
+{% endif %}
+{% endblock %}
