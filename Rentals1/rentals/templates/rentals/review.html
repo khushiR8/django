@@ -1,0 +1,101 @@
+<html>
+ <head>
+   <title>Property Review</title>
+   
+ <style type="text/css">
+   
+ body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+ li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+h3 {
+    color:purple;
+    text-transform:uppercase;
+}
+   
+ </style>
+ </head>
+ <body>
+  <!-- Reference https://www.w3schools.com/css/css_navbar.asp-->
+  <nav>
+  <ul>
+    <li><a href="/rentals/">Home</a></li>
+    <li><a >Our houses</a></li>
+    <li><a >Owners</a></li>
+    <li><a href="/rentals/review" class="active" >Review</a></li>
+    <li><a >Contact</a></li>
+    <li><a >About</a></li>
+  </ul>
+</nav>
+<main>
+  <div style="margin-left:15%;padding:1px 16px;height:1000px;">
+  <h3 >Please review your stay</h3>
+  <h3 style="color:red;">Give genuine feedback</h3>
+  
+  <p>
+   <form action="review_pro" method="get" >
+     <fieldset>
+      <legend>Personal Details:</legend>
+	Name : <br/>
+	<input type="text" value="" name="txt_name" title="Name should consist of one or more words, starting with an uppercase letter followed by lowercase characters, and separated by spaces" maxlength="16" size="50" pattern="[A-Z][a-z]+( [A-Z][a-z]+)*$" required /><br/><br/>
+	
+	
+  Title: <br/>
+		<input type="radio" name="txt_gender" value="male" required/> Male
+  	<input type="radio" name="txt_gender" value="female" /> Female
+  	<input type="radio" name="txt_gender" value="other" /> Other <br/><br/>
+     </fieldset>
+	<!-- multiple, size -->
+     <fieldset>
+      <legend>Property Details:</legend>
+	<h5>Please give us feedback on your appreciation of the property</h5> 
+	Cleanliness : <br/>
+	 <select name="txt_clean_rating" size ="2" multiple='true' >
+ 	 <option value="" selected>Please select a value</option>
+	 <option value= "1" >one</option>
+	 <option value= "2" >two</option>
+	 <option value= "3" >3</option>
+	 <option value= "4" >4</option>
+	 <option value= "5" >5</option>
+	</select><br/><br/>
+	Comment: </br>
+	<textarea  rows="10" cols="130" name="txt_comment"></textarea><br/><br/>
+	<button type="button" onclick="alert('Hello World!')">Click Me!</button> <br/><br/>
+	<input type="submit"/> 
+	<input type="reset"/>
+
+
+   </form>
+  </p>
+  </div>
+</main>
+ </body>
+</html>

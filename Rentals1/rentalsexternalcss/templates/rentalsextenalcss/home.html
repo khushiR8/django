@@ -1,0 +1,38 @@
+<html>
+ <head>
+   <title>Property display</title>
+   
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"> 
+   
+ </head>
+ <body>
+  <!-- Reference https://www.w3schools.com/css/css_navbar.asp-->
+  <nav>
+    <ul>
+      <li><a href="{% url 'rentalsexternalcss:index' %}" class="active">Home</a></li>
+      <li><a >Our houses</a></li>
+      <li><a >Owners</a></li>
+      <li><a href="{% url 'rentalsexternalcss:review' %}">Review</a></li>
+      <li><a >Contact</a></li>
+      <li><a >About</a></li>
+    </ul>
+ </nav>
+ <main>
+  <div style="margin-left:15%;padding:1px 16px;height:1000px;">
+  <h3 style="text-transform: lowercase;">Our Top Rated Properties</h3>
+  <h3>test h3</h3>
+  <p>
+   Contemporary house1<br/>
+   {% load static %}
+   <img src="{% static 'images/house1.jpeg' %}"/>
+  </p>
+  <p>
+   Beach house<br/>
+   
+   <img src="{% static 'images/house2.jpeg' %}"/>
+  </p>
+  </div>
+ </main>
+ </body>
+</html>

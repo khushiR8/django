@@ -1,0 +1,32 @@
+<html>
+ <head>
+  <title>{% block title %}My amazing site{% endblock  %}</title>
+   
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"> 
+   
+ </head>
+ <body>
+  <!-- Reference https://www.w3schools.com/css/css_navbar.asp-->
+  <nav>
+    {% block navbar %}
+    <ul>
+      <li><a href="{% url 'rentalstemplates:index' %}" 
+        {% if active_class == "index" %} class="active" {% endif %}>Home</a></li>
+      <li><a >Our houses</a></li>
+      <li><a >Owners</a></li>
+      <li><a href="{% url 'rentalstemplates:review' %}" 
+        {% if active_class == "review" %} class="active" {%endif%}>Review</a></li>
+      <li><a >Contact</a></li>
+      <li><a >About</a></li>
+      <li><a >Rental Templates</a></li>
+    </ul>
+    {% endblock %}
+ </nav>
+ <main>
+  <div style="margin-left:15%;padding:1px 16px;height:1000px;">
+    {% block content %}{% endblock %}
+  </div>
+ </main>
+ </body>
+</html>

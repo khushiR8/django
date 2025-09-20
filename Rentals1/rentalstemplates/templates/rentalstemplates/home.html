@@ -1,0 +1,20 @@
+{% extends "rentalstemplates/base.html" %}
+
+{% block title %}Property Rental {% endblock title%}
+
+{% block content %}
+<h3 style="text-transform: lowercase;">Our Top Rated Properties</h3>
+  <h3>test h3</h3>
+  <p>
+   Contemporary house1<br/>
+   {% load static %}
+   <img src="{% static 'images/house1.jpeg' %}"/>
+  </p>
+  <p>
+   Beach house<br/>
+   
+   <img src="{% static 'images/house2.jpeg' %}"/>
+  </p>
+{% endblock content %}
+  
+  

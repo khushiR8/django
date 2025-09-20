@@ -1,0 +1,75 @@
+<html>
+ <head>
+   <title>Property display</title>
+   
+<style>
+  body {
+    margin: 0;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+ li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+h3 {
+    color:purple;
+    text-transform:uppercase;
+}
+  </style>
+   
+ </head>
+ <body>
+  <!-- Reference https://www.w3schools.com/css/css_navbar.asp-->
+  <nav>
+    <ul>
+      <li><a href="{% url 'rentals:index' %}" class="active">Home</a></li>
+      <li><a >Our houses</a></li>
+      <li><a >Owners</a></li>
+      <li><a href="{% url 'rentals:review' %}">Review</a></li>
+      <li><a >Contact</a></li>
+      <li><a >About</a></li>
+    </ul>
+ </nav>
+ <main>
+  <div style="margin-left:15%;padding:1px 16px;height:1000px;">
+  <h3 style="text-transform: lowercase;color:red">Our Top Rated Properties</h3>
+  <h3>test h3</h3>
+  <p>
+   Contemporary house<br/>
+   {% load static %}
+   <img src="{% static 'images/house1.jpeg' %}"/>
+  </p>
+  <p>
+   Beach house<br/>
+   
+   <img src="{% static 'images/house2.jpeg' %}"/>
+  </p>
+  </div>
+ </main>
+ </body>
+</html>
